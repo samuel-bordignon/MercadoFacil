@@ -1,0 +1,161 @@
+/* Define estilos básicos */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #00a664;
+}
+
+/* Estilo da navbar */
+nav#icons {
+    width: 100%;
+    background-color: #00a664;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav#icons .box-logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav#icons .box-links {
+    display: flex;
+    align-items: center;
+}
+
+nav#icons .box-links .caixa-pesquisa {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+nav#icons .box-links .caixa-pesquisa input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+nav#icons .box-links .caixa-pesquisa a {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+nav#icons .box-carrinho {
+    display: flex;
+    align-items: center;
+}
+
+nav#icons .box-carrinho a {
+    margin-left: 20px;
+    color: white;
+}
+
+/* Estilo da seção de perfil */
+.perfil {
+    margin: 100px auto 0 auto; /* Ajustado para não sobrepor a navbar */
+    width: 80%;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 48%, rgba(9,9,121,1) 48%, rgba(9,9,121,1) 100%);
+    border-radius: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+.perfil .img-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin: auto;
+}
+
+.deletarPerfil {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffd0d0;
+    border: none;
+    border-radius: 6px;
+    border: rgb(255, 147, 147) solid 3px;
+    height: 40px;
+    padding: 6px 12px;
+    color: rgb(255, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    width: 200px;
+}
+
+/* Estilo do formulário de informações */
+.informacoes-cliente {
+    width: 80%;
+    margin: 2% auto;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.informacoes-cliente label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.informacoes-cliente input {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.informacoes-cliente input[readonly] {
+    background-color: #f9f9f9;
+}
+
+.botao-alterar {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background: transparent;
+    border: 2px solid #09c;
+    color: #09c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-alterar:hover {
+    background-color: #09c;
+    color: #fff;
+}
+
+.aviso {
+    color: red;
+    visibility: hidden;
+}
+
+.aviso.ativo {
+    visibility: visible;
+}

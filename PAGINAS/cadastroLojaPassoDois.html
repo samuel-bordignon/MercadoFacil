@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilosGlobais.css">
+    <link rel="stylesheet" href="../CSS/cadastroLojaDois.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-imagem">
+            <img src="../IMAGENS/Logo Positivo.png" alt="">
+        </div>
+        <div class="form">
+
+            <div class="form-header">
+                <div class="title">
+                    <h1>Passo N° 2</h1>
+                </div>
+                <div class="header-buttom">
+                    <button onclick="window.location.href='cadastroLojaPassoUm.html'">Voltar</button>
+                </div>
+            </div>
+            <div class="title-input">
+                <h3>Endereço</h3>
+            </div>
+
+            <form id="cadastro-form-dois" class="input-group">
+                <div class="input-box">
+                    <label for="cep">CEP</label>
+                    <input id="cep" type="number" name="cep" placeholder="Digite seu nome" required>
+                </div>
+                <div class="input-box">
+                    <label for="bairro">Bairro</label>
+                    <input id="bairro" type="text" name="bairro" placeholder="Digite seu sobrenome" required>
+                </div>
+                <div class="input-box">
+                    <label for="numero">Número</label>
+                    <input id="numero" type="number" name="numero" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="input-box">
+                    <label for="complemento">Complemento</label>
+                    <input id="complemento" type="text" name="complemento" placeholder="(XX) XXXX-XXXX" required>
+                    <span  id="cadastroError" style="color: red; display: none;">Preencha todos os campos corretamente</span>
+                </div>
+            </form>
+            <div class="group-botoes">
+                <button class="botao-continuar" onclick="salvaDadosPaginaDois()">Próximo</button>
+                <div class="box-login">
+                    <label for="login">Já possui uma conta? </label>
+                    <button id="login" onclick="window.location.href='login.html'"> Login </button>
+                </div>
+            </div>
+            <div class="box-progresso">
+                <i class="bi bi-check-circle-fill"></i>
+                <div id="barra-progresso"></div>
+                <i class="bi bi-check-circle"></i>
+                <div id="barra-progresso"></div>
+                <i class="bi bi-check-circle"></i>
+                
+
+            </div>
+        </div>
+    </div>
+    <script src="../SCRIPTS/main.js"></script>
+</body>
+
+</html>

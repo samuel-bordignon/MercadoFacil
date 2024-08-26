@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilosGlobais.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-imagem">
+            <img src="../IMAGENS/Logo Positivo.png" alt="">
+        </div>
+        <div class="form">
+
+            <div class="form-header">
+                <div class="title">
+                    <h1>Entrar na minha conta</h1>
+                </div>          
+            </div>
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="email-login">E-mail</label>
+                    <input id="email-login" type="email" name="firstname" placeholder="Digite seu nome" required>
+                    <label id="id-aviso-email" style="color: red;" class="aviso">E-mail não cadastrado</label>
+                </div>
+                <div class="input-box">
+                    <label for="senha-login">Senha</label>
+                    <input id="senha-login" type="password" name="senha" placeholder="Digite sua senha" required>
+                    <label id="id-aviso-senha" style="color: red;" class="aviso">Senha incorreta</label>
+                </div>
+            </div>
+            
+            <div class="botao-entrar">
+                <button class="botao-continuar" onclick=" processarLogin()" ondblclick="window.location.href='..'">Continuar</button>
+            </div>
+            <div class="box-cadastro">
+                <label for="cadastro">Não possui uma conta?</label>
+                <button id="cadastro" onclick="window.location.href='cadastroCliente.html'">Cadastrar-se</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="/SCRIPTS/main.js"></script>
+</body>
+</html>

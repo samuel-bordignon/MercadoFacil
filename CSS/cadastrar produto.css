@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.tituloCadastrarProd {
+    color: var(--Azul-Principal, #0C194E);  
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    background-color: white;
+    color: #0C194E;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho h1 {
+    font-size: 24px;
+}
+
+.icone-usuario {
+    display: flex;
+    align-items: center;
+}
+
+.icone-usuario i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.principal {
+    display: flex;
+    flex: 1;
+    padding: 25px;
+    background-color: rgb(236, 236, 236);
+}
+
+.produto, .opcionais {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.produto {
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+}
+
+.imagem-produto {
+    text-align: center;
+    background-color: #0C194E;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.preview-imagem input {
+    display: none;
+}
+
+/* Estilos gerais permanecem os mesmos */
+
+.picture {
+    width: 70%;
+    aspect-ratio: 4/3;  /* Ajustando a proporção para ser menor */
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+    margin: auto;  /* Centraliza o elemento horizontalmente */
+}
+
+.picture:hover {
+    color: #777;
+    background: #ccc;
+}
+
+.picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+}
+
+.picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.picture__img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.titulo-produto, .preco-produto {
+    width: 70%;
+    height: 35px;
+    margin: auto;
+    background-color: #A5A4A4;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+.form-produto, .form-opcionais {
+    margin-top: 20px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.campo small {
+    font-size: 12px;
+    color: #999;
+}
+
+.botoes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botoes .descartar {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.botoes .descartar:hover {
+    background-color: #ff1a1a;
+}
+
+.botoes .salvar {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.botoes .salvar:hover {
+    background-color: #45a049;
+}
+
+.opcionaisTitulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+}

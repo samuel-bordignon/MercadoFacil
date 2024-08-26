@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  gap: 16px;
+  background-image: url("tricodando.png");
+  background-color: rgb(142, 240, 142);
+}
+
+.card-link {
+  text-decoration: none; /* Remove a sublinhado dos links */
+  color: inherit; /* Herda a cor do texto ao redor */
+}
+
+.card {
+  background-color: #fff;
+  width: 180px;
+  height: 260px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px #aaaa;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito hover */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta ligeiramente o tamanho do card no hover */
+}
+
+.card img {
+  justify-items: center;
+  align-items: center;
+  padding: 3px 15px;
+  width: 80%;
+  height: 130px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  height: 50%;
+}
+
+.card h4 {
+  display: none; /* Esconde o h4 inicialmente */
+  width: 21px;
+  height: 30px;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  margin: 0;
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 0.671);
+}
+
+.card:hover h4 {
+  display: block; /* Mostra o h4 quando o card é hovered */
+}
+
+.card h1 {
+  font-size: 1.2rem;
+}
+
+.card h2 {
+  font-size: 0.9rem;
+  color: rgba(15, 15, 15, 0.667);
+}
+
+.card span {
+  color: #000;
+  font-size: 20px;
+  font-weight: 350;
+  line-height: 140%;
+}
+
+a {
+  text-decoration: none; /* Remove a sublinhado dos links */
+  color: inherit; /* Herda a cor do texto ao redor */
+}

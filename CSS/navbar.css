@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f1f1;
+    border-radius: auto; 
+    margin-top: 0px;
+
+}
+
+#icons ul {
+    list-style-type: none;
+    padding: 0;
+    background: rgba(0,198,119,1);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+#icons ul li {
+    display: inline;
+    
+}
+
+#icons li a {
+    color: rgb(248, 245, 245);
+    padding: 20px;
+    display: inline-block; 
+    text-decoration: none;
+}
+
+#icons li a:hover {
+    color: rgb(197, 197, 197); 
+}
+
+.caixa-pesquisa {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 95px;
+    background: rgb(236,230,240);
+    padding: 5px;
+    width: 600px;
+    margin: 20px; 
+    justify-content: space-around;
+  
+}
+
+.texto-pesquisa {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+
+}
+.box-logo img{
+    width: 180px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-top: 0.5%;
+
+
+}
+.carrinho{
+    border: solid;
+    width: 37px;
+    height: 35px;
+    flex-shrink: 0;
+
+}
+
+.box-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.box-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+
+}
+
+.box-carrinho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    font-size: 25px;
+    color: white;
+}

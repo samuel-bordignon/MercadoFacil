@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="/zProdutos/CSS/cards.css">
+    <link rel="stylesheet" href="/zProdutos/CSS/produtos-cliente-mercado.css">
+    <link rel="stylesheet" href="/CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+
+<body>
+    <nav id="icons">
+        <ul>
+            <div class="box-logo">
+                <img src="/IMAGENS/Logo.png" alt="">
+            </div>
+            <div class="box-links">
+                <div class="caixa-pesquisa">
+                    <input class="texto-pesquisa" type="text" placeholder="Busque por um produto aqui">
+                    <a class="botao-pesquisa" href="#"><i class="bi bi-search"></i></a>
+                </div>
+            </div>
+
+            <div class="box-carrinho">
+                <a href="login.html"><i class="bi bi-door-closed"></i></a>
+                <li> <a href="listaCompras.html"><i class="bi bi-cart"></i></a></li>
+                <a href="perfilMercado.html"><i class="bi bi-person-circle"></i></a>
+            </div>
+        </ul>
+
+    </nav>
+
+    <div class="secao-ofertas">
+        <div class="distancialoja">
+            <a href="#">
+                <div class="container-logo-loja">
+                    <img src="/IMAGENS/supermercado N.S.jpeg" alt="Supermercado N.S Aparecida" class="logo-loja">
+                    <div class="info-distancia">
+            </a>
+            <h3>Supermercado <br>N.S Aparecida</h3>
+            <p class="distancia">4.5 Km</p>
+        </div>
+    </div>
+
+    </div>
+    <a href="#">
+        <div class="ofertas-diarias">
+            <img src="/IMAGENS/oferta.PNG" alt="Ofertas do dia" class="imagem-ofertas">
+            <div class="info-ofertas">
+            </div>
+        </div>
+    </a>
+
+    </div>
+<div class="divProdutosTitulos">
+    <div class="secao-produtos">
+        <h1>Laticínios</h1>
+        <hr class="linha-repartição">
+        <div class="produtos-container">
+            <div id="leite-container" class="card-container"></div>
+        </div>
+
+
+        <h1>Açougue</h1>
+        <hr class="linha-repartição">
+        <div class="produtos-container">
+            <div id="pao-container" class="card-container"></div>
+        </div>
+
+
+        <h1>Hortifruti</h1>
+        <hr class="linha-repartição">
+        <div class="produtos-container">
+            <div id="carne-container" class="card-container"></div>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script src="/zProdutos/JS/card.js"></script>
+
+</html>

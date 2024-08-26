@@ -1,0 +1,323 @@
+
+body{
+
+    background-color: rgb(238, 238, 241);
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+
+}
+
+  /* Tela Carrinho */
+
+h3{
+
+    width: 240px;
+    flex-shrink: 0;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2%;
+    margin-left: 9%;
+
+    color: var(--Azul-Principal, #0C194E);
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 50.4px */
+
+}
+
+.fundoSubTitulo{
+
+    margin: auto; 
+    display: flex;
+    justify-content: space-around;
+    width: fit-content;
+
+    width: 1389px;
+    height: 66px;
+    flex-shrink: 0;
+    background-color: #0C194E;
+ 
+
+}
+
+.subTitulo{
+ 
+    margin-top: 1%;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+
+}
+
+   /*Fileira do Primeiro Produto, A parte branca + a organização dos elementos*/
+.contentUm{
+
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 1389px;
+    height: 138px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+img{
+
+    width: 135px;
+    height: 135px;
+    flex-shrink: 0;
+
+}
+
+.descricaoProduto{
+
+    width: 269px;
+    height: 72px;
+    flex-shrink: 0;
+    margin-top: 3%;
+    margin-right: 5%;
+
+   color: #000;
+   font-size: 22px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 140%; /* 30.8px */
+
+}
+
+.precoProduto{
+
+    width: 130px;
+    height: 41px;
+    flex-shrink: 0;
+    margin-top: 3.5%;
+    margin-right: 11.8%;
+
+    color: #000; 
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 35px */
+
+}
+
+.botaoMais{
+
+    width: 55px;
+    height: 36px;
+    flex-shrink: 0;
+    margin-top: 3%;
+
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #00C677;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+
+}
+
+button:hover{
+
+    background-color: #01a362;
+
+}
+
+.unidadeOvo{
+
+    width: 12px;
+    height: 41px;
+    flex-shrink: 0;
+    margin-top: 2.4%;
+
+    color: #000;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 40.6px */
+
+    border-radius: 8px;
+    border: 1.2px solid var(--Azul-Principal, #0C194E);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 101px;
+    height: 54px;
+    flex-shrink: 0;
+}
+
+.botaoMenos{
+
+    width: 55px;
+    height: 36px;
+    flex-shrink: 0;
+    margin-top: 3%;
+    margin-right: 1%;
+   
+
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #00C677;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+
+}
+
+      /*Fileira do Segundo Produto, A parte branca + a organização dos elementos*/
+
+.contentDois{
+
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5%;
+    width: 1389px;
+    height: 138px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.unidadeBanana{
+
+    width: 12px;
+    height: 41px;
+    flex-shrink: 0;
+    margin-top: 2.4%;
+
+    color: #000;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 40.6px */
+
+    border-radius: 8px;
+    border: 1.2px solid var(--Azul-Principal, #0C194E);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 101px;
+    height: 54px;
+    flex-shrink: 0;
+
+}
+
+      /*Fileira do Terceira Produto, A parte branca + a organização dos elementos*/
+.contentTres{
+
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5%;
+    width: 1389px;
+    height: 138px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.unidadeUva{
+
+    width: 12px;
+    height: 41px;
+    flex-shrink: 0;
+    margin-top: 2.4%;
+
+    color: #000;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 40.6px */
+
+    border-radius: 8px;
+    border: 1.2px solid var(--Azul-Principal, #0C194E);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 101px;
+    height: 54px;
+    flex-shrink: 0;
+
+}
+
+.fundoAzulDoTotal{
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5%;
+    width: 270px;
+    height: 46px;
+    flex-shrink: 0;
+    background: var(--Azul-Principal, #0C194E);
+
+}
+
+.totalLabel{
+
+    margin-top: 2%;
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 35px */
+
+}
+
+.fundoBrancoDoTotal{
+
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 270px;
+    height: 93px;
+    flex-shrink: 0;
+
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.precoTotal{
+
+    margin-top: 10%;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 35px */
+
+}
+
+.botaoLista{
+
+    display: flex;
+    margin-left: auto;
+    margin-right: 14%;
+    justify-content: center;
+    margin-top: 2%;
+
+    width: 166px;
+    height: 54px;
+    padding: 11.5px 10.74px 11.5px 10.73px;
+    flex-shrink: 0;
+
+    border-radius: 6px;
+    border: 1px solid var(--web-kyteapp-com-shamrock, #2DD1AC);
+    background: #00C677;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    color: #FFF;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 110% */
+
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Recapitulação</title>
+    <link rel="stylesheet" href="/assets/CSS/concluir.css">
+    <link rel="stylesheet" href="/assets/CSS/estilosGlobais.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        const getLocalStorageConcluir = (chave) => JSON.parse(localStorage.getItem(chave)) ?? []
+
+        const criaTabela = () => {
+            const emailLoja = getLocalStorageConcluir('emailLoja');
+            const nomeLoja = getLocalStorageConcluir('nomeLoja');
+            const celularLoja = getLocalStorageConcluir('celularLoja');
+            const cnpj = getLocalStorageConcluir('cnpj');
+            const cep = getLocalStorageConcluir('cep');
+            const bairro = getLocalStorageConcluir('bairro');
+            const numero = getLocalStorageConcluir('numero');
+            const complemento = getLocalStorageConcluir('complemento');
+            const nomeProprietario = getLocalStorageConcluir('nomeProprietario');
+            const emailProprietario = getLocalStorageConcluir('emailProprietario');
+            const sobrenomeProprietario = getLocalStorageConcluir('sobrenomeProprietario');
+            const celularProprietario = getLocalStorageConcluir('celularProprietario');
+            const senha = getLocalStorageConcluir('senha');
+
+            const tbody = document.querySelector('#tabela-dados');
+
+            const dados = [
+                { label: 'Nome', value: nomeProprietario },
+                { label: 'Sobrenome', value: sobrenomeProprietario },
+                { label: 'Celular Pessoal', value: celularProprietario },
+                { label: 'E-mail Pessoal', value: emailProprietario },
+                { label: 'Senha', value: senha },
+                { label: 'Nome da Loja', value: nomeLoja },
+                { label: 'E-mail comercial', value: emailLoja },
+                { label: 'Telefone Comercial', value: celularLoja },
+                { label: 'CNPJ', value: cnpj },
+                { label: 'CEP', value: cep },
+                { label: 'Bairro', value: bairro },
+                { label: 'N°', value: numero },
+                { label: 'Complemento', value: complemento }
+            ];
+
+            dados.forEach(dado => {
+                const novaLinha = document.createElement('tr');
+                novaLinha.innerHTML = `
+                    <td>${dado.label}:</td>
+                    <td>${dado.value}</td>
+                `;
+                tbody.appendChild(novaLinha);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            criaTabela();
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-tabela">
+            <table class="styled-table">
+                <tbody id="tabela-dados">
+                    <!-- As linhas da tabela serão inseridas aqui via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="divisoria"></div>
+        <div class="box-form">
+            <div class="cabecario">
+                <h1>Tudo certo por aqui?</h1>
+                <p>Confire se todos os campos foram preenchidos corretamente</p>
+            </div>
+            <div class="resposta">
+                <button class="nao" onclick="window.location.href='cadastroLojaPassoTres.html'">Não</button>
+                <button class="sim" onclick="salvaDadosLoja()">Sim</button>
+            </div>
+            <div class="box-progresso">
+                <i class="bi bi-check-circle-fill"></i>
+                <div id="barra-progresso" class="um"></div>
+                <i class="bi bi-check-circle-fill"></i>
+                <div id="barra-progresso" class="um"></div>
+                <i class="bi bi-check-circle-fill"></i>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/scripts/main.js"></script>
+</body>
+
+</html>

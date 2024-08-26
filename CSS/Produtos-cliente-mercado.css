@@ -1,0 +1,250 @@
+body{
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    gap: 16px;
+}
+#icones ul {
+    list-style-type: none;
+    padding: 0;
+    background: rgba(0,198,119,1);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#icones ul li {
+    display: inline;
+}
+
+#icones li a {
+    color: rgb(248, 245, 245);
+    padding: 20px;
+    display: inline-block; 
+    text-decoration: none;
+}
+
+#icones li a:hover {
+    color: rgb(197, 197, 197); 
+}
+
+.caixa-pesquisa {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 95px;
+    background: rgb(236,230,240);
+    padding: 5px;
+    width: 600px;
+    margin: 20px; 
+    justify-content: space-around;
+}
+
+.campo-pesquisa {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+}
+
+.caixa-logo img {
+    width: 170px;
+    margin-top: 5px;
+}
+
+.caixa-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    font-size: 25px;
+    color: white;
+}
+
+                                     /* --fim do cabecario */
+                                
+
+                                        /* Seção de Ofertas */
+
+
+
+.secao-ofertas {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0C194E;
+    padding: 20px;
+    color: white;
+    font-family: poppins, sans-serif;
+}
+
+.distancia-loja {
+    display: flex;
+    align-items: center;
+}
+
+.container-logo-loja {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 20px;
+    margin-top: 2px;
+    width: 500px;
+    height: 130px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    color: black;
+    text-decoration: none;
+}
+
+.logo-loja {
+    width: 130px;
+    height: auto;
+    padding: 8px;
+    border-radius: 27px;
+}
+
+.info-distancia {
+    margin-left: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.info-distancia h3 {
+    color: black; /* Cor do texto preto */
+    text-decoration: none; /* Remover sublinhado se aplicável */
+}
+
+.info-distancia p {
+    margin-top: 10px; /* Ajuste de margem superior para o parágrafo */
+}
+
+.distancia {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.ofertas-diarias {
+    display: flex;
+    align-items: center;
+}
+
+.imagem-ofertas {
+    width: 500px;
+    height: 150px;
+    margin-right: 80px;
+}
+
+.info-ofertas h3 {
+    display: flex;
+    flex-direction: column;
+    margin: none;
+    left: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+                            /* --Fim seção ofertas/logo mercado */
+
+
+                                /* --aba de produtos------ */
+
+ 
+.titulo {
+    font-size: 1.2rem;
+    margin-left: 8%; /* Ajuste este valor conforme necessário */
+  }
+  
+  .contraste {
+    background-color: #000;
+    width: 10%;
+    height: 2px;
+    margin-left: 8%;
+  }
+  
+  .produtos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    width: 180px;
+    height: 260px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card img {
+    justify-items: center;
+    align-items: center;
+    padding: 3px 15px;
+    width: 80%;
+    height: 130px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  
+  .card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 50%;
+  }
+  
+  .card-link {
+    text-decoration: none; /* Remove a sublinhado dos links */
+    color: inherit; /* Herda a cor do texto ao redor */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho do card no hover */
+  }
+  .card h4 {
+    display: none; /* Esconde o h4 inicialmente */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  .card:hover h4 {
+    display: flex; /* Mostra o h4 quando o card é hovered */
+    color: rgba(255, 0, 0, 0.671);
+    width: 25px;
+    height: 25px;
+    border: solid;
+    font-size: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card h1 {
+    font-size: 1.2rem;
+  }
+  
+  .card h2 {
+    font-size: 0.9rem;
+    color: rgba(15, 15, 15, 0.667);
+  }
+  
+  .card span {
+    color: #000;
+    font-size: 20px;
+    font-weight: 350;
+    line-height: 140%;
+  }
+  
+  a {
+    text-decoration: none; /* Remove a sublinhado dos links */
+    color: inherit; /* Herda a cor do texto ao redor */
+  }
+    
+  
+

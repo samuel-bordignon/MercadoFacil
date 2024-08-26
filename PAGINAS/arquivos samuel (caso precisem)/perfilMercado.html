@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Mercado</title>
+    <link rel="stylesheet" href="/assets/CSS/perfilMercado.css">
+    <link rel="stylesheet" href="/assets/CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        function abreEditarLoja() {
+            destravaCamposLoja();
+        }
+
+        function retiraAtributoLoja() {
+            // Encontrando os elementos input
+            const inputs = document.querySelectorAll('.informacoes-mercado input');
+            inputs.forEach(input => {
+                input.removeAttribute('readonly');
+            });
+        }
+
+        function adicionaAtributoLoja() {
+            // Encontrando os elementos input
+            const inputs = document.querySelectorAll('.informacoes-mercado input');
+            inputs.forEach(input => {
+                input.setAttribute('readonly', 'readonly');
+            });
+        }
+
+        function insereDadosLoja() {
+            const index = encontraIndiceLoja();
+            const db = lerLoja();
+            const user = db[index];
+            const fields = {
+                'inputs-info-nome-proprietario': user.nomeProprietario,
+                'inputs-info-sobrenome-proprietario': user.sobrenomeProprietario,
+                'inputs-info-email-pessoal-loja': user.emailProprietario,
+                'inputs-info-celular-pessoal-loja': user.celularProprietario,
+                'inputs-info-senha-loja': user.senha,
+                'inputs-info-nome-loja': user.nomeLoja,
+                'inputs-info-email-loja': user.emailLoja,
+                'inputs-info-celular-loja': user.celularLoja,
+                'inputs-info-cep-loja': user.cep,
+                'inputs-info-cnpj-loja': user.cnpj,
+                'inputs-info-bairro': user.bairro,
+                'inputs-info-numero-loja': user.numero,
+                'inputs-info-complemento-loja': user.complemento
+            };
+
+            for (const [id, value] of Object.entries(fields)) {
+                document.getElementById(id).value = value;
+            }
+        }
+
+        function travaCamposLoja() {
+            adicionaAtributoLoja();
+        }
+
+        function destravaCamposLoja() {
+            retiraAtributoLoja();
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            insereDadosLoja();
+            travaCamposLoja();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="icons">
+        <ul>
+            <div class="box-logo">
+                <img src="/assets/imagens/Group 1249.png" alt="">
+            </div>
+            <div class="box-links">
+                <li><a class="inicio" href="#">Início</a></li>
+                <div class="caixa-pesquisa">
+                    <input class="texto-pesquisa" type="text" placeholder="Busque por um produto aqui">
+                    <a class="botao-pesquisa" href="#"><i class="bi bi-search"></i></a>
+                </div>
+            </div>
+
+            <div class="box-carrinho">
+                <li> <a href="#"><i class="bi bi-cart"></i></a></li>
+                <a href="#"><i class="bi bi-person-circle"></i></a>
+            </div>
+        </ul>
+
+    </nav>
+
+    <!-- Foto de perfil -->
+
+    <div class="perfil">
+        <svg class="img-perfil" xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 180 180"
+            fill="none">
+            <path
+                d="M180 90C180 139.706 139.706 180 90 180C40.2944 180 0 139.706 0 90C0 40.2944 40.2944 0 90 0C139.706 0 180 40.2944 180 90Z"
+                fill="#D9D9D9" />
+        </svg>
+    </div>
+
+    <!-- Informações do perfil -->
+
+    <form id="informacoes-mercado" class="informacoes-mercado">
+        <label class="fonte-verde">Dados da conta</label>
+        <button type="button" class="fonte-cinza" id="botao-edita" onclick="abreEditarLoja()">Editar</button>
+        <div class="linha-repartição"></div>
+
+        <label class="texto-informacional"><i class="bi bi-eye"></i> Exibido para todos</label><br>
+
+        <label for="inputs-info-nome-loja">Nome do mercado: </label>
+        <input id="inputs-info-nome-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-bairro">Bairro: </label>
+        <input id="inputs-info-bairro" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-numero-loja">N°: </label>
+        <input id="inputs-info-numero-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-complemento-loja">Complemento: </label>
+        <input id="inputs-info-complemento-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-celular-loja">Numero comercial: </label>
+        <input id="inputs-info-celular-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-email-loja">E-mail comercial: </label>
+        <input id="inputs-info-email-loja" class="texto" readonly required></input><br>
+
+
+        <label id="id-aviso-email-comercial" class="aviso">E-mail já cadastrado</label><br>
+
+
+        <div class="linha-repartição"></div>
+
+        <label class="texto-informacional"><i class="bi bi-eye"> Exibido apenas para você</i></label><br>
+
+        <label for="inputs-info-senha-loja">Senha: </label>
+        <input id="inputs-info-senha-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-email-pessoal-loja">E-mail Pessoal: </label>
+        <input id="inputs-info-email-pessoal-loja" class="texto" readonly required></input><br>
+
+
+        <label id="id-aviso-email" class="aviso">E-mail já cadastrado</label><br>
+
+
+        <label for="inputs-info-celular-pessoal-loja">Celular Pessoal: </label>
+        <input id="inputs-info-celular-pessoal-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-nome-proprietario">Nome: </label>
+        <input id="inputs-info-nome-proprietario" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-sobrenome-proprietario">Sobrenome: </label>
+        <input id="inputs-info-sobrenome-proprietario" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-cnpj-loja">CNPJ: </label>
+        <input id="inputs-info-cnpj-loja" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-cep-loja">CEP: </label>
+        <input id="inputs-info-cep-loja" class="texto" readonly required></input><br>
+
+        <button type="button" class="botao-alterar" onclick="editaCamposLoja()">Salvar</button>
+
+    </form>
+
+    <script src="/assets/scripts/main.js"></script>
+</body>
+
+</html>

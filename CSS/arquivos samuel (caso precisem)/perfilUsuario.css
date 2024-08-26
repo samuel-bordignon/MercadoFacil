@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.perfil{
+    margin: auto;
+    width: 1219px;
+    height: 210px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 48%, rgba(9,9,121,1) 48%, rgba(9,9,121,1) 100%);
+    margin-top: 5%;
+    align-items: center;
+
+}
+
+.img-perfil{
+    margin-top: 2%;
+    margin-left: 3%;
+
+}
+
+.informacoes{
+    margin: auto;
+    width: 1219px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: rgb(255,255,255);
+    margin-top: 0.5%;
+    align-items: center;
+
+}
+
+.fonte-verde{
+    font-family: 'Poppins', sans-serif;
+    color: rgba(0,198,119,1);
+    margin-left: 3%;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: -20px;
+
+}
+
+.fonte-cinza{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 93%;
+    color: rgb(115, 115, 115);
+    color: rgb(115, 115, 115);
+    text-decoration: none;
+    font-weight: normal;
+
+}
+
+hr{
+    width: 95%;
+    color: rgb(223, 214, 214);
+    margin-bottom: 1%;
+    margin-top: 1.5%;
+}
+
+.texto-informacional{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(115, 115, 115);
+    color: rgb(41, 41, 41);
+    text-decoration: none;
+    font-weight: normal; 
+    margin-left: 2.5%;
+
+}
+
+.bi bi-eye{
+    width: 1.5px;
+
+}
+
+.texto{
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: normal; 
+    margin-left: 2.5%;
+    font-size: 14px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.texto:focus{
+    outline: none;
+    
+}
+
+.texto.active{
+    color: rgb(105, 105, 105);
+    border: 1px solid rgb(105, 105, 105);
+}
+
+
+.botao-alterar{
+    background-color: transparent;
+    border: 2px solid rgb(9, 9, 121);
+    color: rgb(9, 9, 121);
+    padding: 9px 19px; 
+    font-size: 16px;
+    border-radius: 5px; 
+    margin-top: 3%;
+    margin-left: 90%;
+    font-weight: bold;
+
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(9, 9, 121);
+
+}
+
+.aviso {
+    visibility: hidden;
+
+}
+
+.ativo{
+    visibility: visible;
+    color: red;
+  }

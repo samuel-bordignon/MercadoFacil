@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #00a664;
+}
+
+nav.menu-lateral {
+    width: 70px;
+    height: 100%;
+    background-color: #00a664;
+    padding: 40px 0 40px 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
+}
+
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+.btn-expandir i {
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li.item-menu {
+    transition: .3s;
+    padding: 10px 0;
+}
+
+ul li.ativo,
+ul li.item-menu:hover {
+    background-color: #0c194e;
+    border-radius: 10px 0 0 10px;
+}
+
+ul li.item-menu a {
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+ul li.item-menu a .icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+ul li.item-menu a .text-link {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+nav.menu-lateral.expandir .text-link {
+    opacity: 1;
+}
+
+nav .box-logo img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+nav .caixa-pesquisa {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    width: 100%;
+}
+
+nav .caixa-pesquisa input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+}
+
+nav .caixa-pesquisa a {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.perfil {
+    margin: 2.5% auto;
+    width: 80%;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 48%, rgba(9,9,121,1) 48%, rgba(9,9,121,1) 100%);
+    border-radius: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+.img-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    margin: auto;
+}
+
+.deletarPerfil {
+    display: block;
+    margin: 20px auto;
+    background-color: #ffd0d0;
+    border: none;
+    border-radius: 6px;
+    border: rgb(255, 147, 147) solid 3px;
+    height: 40px;
+    padding: 6px 12px;
+    color: rgb(255, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    width: 200px;
+}
+
+.informacoes-mercado {
+    width: 80%;
+    margin: 2% auto;
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.informacoes-mercado label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.informacoes-mercado input {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.informacoes-mercado input[readonly] {
+    background-color: #f9f9f9;
+}
+
+.botao-alterar {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background: transparent;
+    border: 2px solid #09c;
+    color: #09c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-alterar:hover {
+    background-color: #09c;
+    color: #fff;
+}
+
+.aviso {
+    color: red;
+    visibility: hidden;
+}
+
+.aviso.ativo {
+    visibility: visible;
+}

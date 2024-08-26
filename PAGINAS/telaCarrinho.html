@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/telaCarrinho.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+                 <!-- NavBar -->
+    <nav id="icons">
+        <ul>
+            <div class="box-logo">
+                <img src="../IMAGENS/Logo.png" alt="">
+            </div>
+            <div class="box-links">
+                <li><a class="inicio" href="#">Início</a></li>
+                <div class="caixa-pesquisa">
+                    <input class="texto-pesquisa" type="text" placeholder="Busque por um produto aqui">
+                    <a class="botao-pesquisa" href="#"><i class="bi bi-search"></i></a>
+                </div>
+                <li><a class="login" href="#">Login</a></li>
+                <li><a class="cadastre-se" href="#">Cadastre-se</a></li>
+            </div>
+
+            <div class="box-carrinho">
+                <li> <a href="#"><i class="bi bi-cart"></i></a></li>
+                <a href="#"><i class="bi bi-person-circle"></i></a>
+            </div>
+        </ul>
+
+    </nav>
+    
+            <!--Tela Carrinho -->
+
+    <h3>Carrinho</h3>
+    <hr>
+
+    <div class="fundoSubTitulo">
+
+        <label class="subTitulo">Produto</label>
+        <label class="subTitulo">Preço</label>
+        <label class="subTitulo">Unidade</label>
+
+    </div>
+
+    <div class="contentUm">
+
+    <img src="../IMAGENS/Ovos.png" alt="">
+        
+        <span class="descricaoProduto">Ovos Brancos Grandes 30 Unidades</span>
+        <span class="precoProduto">R$ 20,50</span>
+        <button type="button" onclick="MaisUnidadeProdUm()" class="botaoMais">+</button>
+        <input type="text" class="unidadeOvo" readonly>
+        <button type="button" onclick="MenosUnidadeProdUm()" class="botaoMenos">-</button>
+
+    </div>
+
+    <div class="contentDois">
+
+        <img src="../IMAGENS/banana nanica.png" alt="">
+            
+            <span class="descricaoProduto">Banana Nanica 1.1Kg</span>
+            <span class="precoProduto">R$ 08,46</span>
+            <button type="button" onclick="MaisUnidadeProdDois()" class="botaoMais">+</button>
+            <input type="text" class="unidadeBanana" readonly>
+            <button type="button" onclick="MenosUnidadeProdDois()" class="botaoMenos">-</button>
+    
+    </div>
+
+    <div class="contentTres">
+
+        <img src="../IMAGENS/Uva.png" alt="">
+            
+            <span class="descricaoProduto">Uva Verde Sem Sementes</span>
+            <span class="precoProduto">R$ 10,50</span>
+            <button type="button" onclick="MaisUnidadeProdTres()" class="botaoMais">+</button>
+            <input type="text" class="unidadeUva" readonly>
+            <button type="button" onclick="MenosUnidadeProdTres()" class="botaoMenos">-</button>
+    
+    </div>   
+    
+    <div class="fundoAzulDoTotal">
+
+        <label class="totalLabel">Total</label>
+
+    </div>
+
+    <div class="fundoBrancoDoTotal">
+
+    <span class="precoTotal">R$ 39,46</span>
+
+    </div>
+
+    <button type="button" class="botaoLista" onclick="enviaLista()">Enviar Lista</button>
+
+</body>
+</html>

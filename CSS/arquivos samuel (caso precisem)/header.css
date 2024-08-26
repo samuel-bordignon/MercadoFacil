@@ -1,0 +1,93 @@
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    background-color: #00C677;
+    height: 65px;
+}
+
+/*lado esquerdo do menu*/
+.lado-esquerdo-menu {
+    display: flex;
+    align-items: center;
+    /* Ajustado para centralizar verticalmente */
+    gap: 50px;
+}
+
+.nav-menu {
+    height: fit-content;
+}
+
+.nav-menu ul {
+    display: flex;
+    align-items: center;
+    /* Ajustado para centralizar verticalmente */
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin-right: 30px;
+}
+
+.nav-menu ul li:last-child {
+    margin-right: 0;
+    /* Remover margem direita do último item da lista dentro da nav */
+}
+
+.logo {
+    margin-right: 20px;
+    /* Ajuste de margem */
+}
+
+.logo img {
+    width: 150px;
+    /* Ajuste de largura */
+}
+
+.atalhos {
+    color: white;
+    text-decoration: none;
+}
+
+.caixa-pesquisa {
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    padding: 2% 5%;
+    width: 400px;
+    justify-content: space-between;
+    /* Ajustado para centralizar verticalmente */
+}
+.texto-pesquisa{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+}
+
+
+/*lado esquerdo do menu*/
+/*--------------------------------------------------------------------------------------------------------*/
+/*lado direito do menu*/
+.lado-direito-menu {
+    margin-left: auto;
+    /* Ajustado para empurrar o item para a direita */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lado-direito-menu .atalhos {
+    color: white;
+    font-size: 30px;
+
+    text-decoration: none;
+}

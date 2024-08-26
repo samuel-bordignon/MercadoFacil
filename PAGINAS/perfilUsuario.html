@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuario</title>
+    <link rel="stylesheet" href="/zProdutos/CSS/perfilUsuario.css">
+    <link rel="stylesheet" href="/CSS/sidebar.css">
+    <link rel="stylesheet" href="/CSS/perfilMercado.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <script>
+        // Função que será chamada quando a página for carregada
+        function abreEditarCliente() {
+            destravaCliente()
+       }
+
+        function retiraAtributoCliente() {
+            // Encontrando os elementos input
+            const nameInput = document.getElementById('inputs-info-nome-cliente')
+            const sobrenomeInput = document.getElementById('inputs-info-sobrenome-cliente')
+            const emailInput = document.getElementById('inputs-info-email-cliente')
+            const celularInput = document.getElementById('inputs-info-celular-cliente')
+            const senhaInput = document.getElementById('inputs-info-senha-cliente')
+
+
+            // Removendo o atributo readonly
+            nameInput.removeAttribute('readonly')
+            sobrenomeInput.removeAttribute('readonly')
+            emailInput.removeAttribute('readonly')
+            celularInput.removeAttribute('readonly')
+            senhaInput.removeAttribute('readonly')
+        }
+
+        function adicionaAtributoCliente() {
+            // Encontrando os elementos input
+            const nameInput = document.getElementById('inputs-info-nome-cliente')
+            const sobrenomeInput = document.getElementById('inputs-info-sobrenome-cliente')
+            const emailInput = document.getElementById('inputs-info-email-cliente')
+            const celularInput = document.getElementById('inputs-info-celular-cliente')
+            const senhaInput = document.getElementById('inputs-info-senha-cliente')
+
+
+            // Removendo o atributo readonly
+            nameInput.setAttribute('readonly', 'readonly')
+            sobrenomeInput.setAttribute('readonly', 'readonly')
+            emailInput.setAttribute('readonly', 'readonly')
+            celularInput.setAttribute('readonly', 'readonly')
+            senhaInput.setAttribute('readonly', 'readonly')
+        }
+        function insereDadosCliente() {
+            const index = encontraIndiceCliente()
+            const db = lerUsuario()
+            const user = db[index]
+            const nameInput = document.getElementById('inputs-info-nome-cliente')
+            const sobrenomeInput = document.getElementById('inputs-info-sobrenome-cliente')
+            const emailInput = document.getElementById('inputs-info-email-cliente')
+            const celularInput = document.getElementById('inputs-info-celular-cliente')
+            const senhaInput = document.getElementById('inputs-info-senha-cliente')
+
+            console.log(db)
+            console.log(index)
+            console.log(user)
+
+
+            nameInput.value = user.nome
+            sobrenomeInput.value = user.sobrenome
+            emailInput.value = user.email
+            celularInput.value = user.celular
+            senhaInput.value = user.senha
+        }
+
+        function travaCamposClientes() {
+            document.getElementById('inputs-info-nome-cliente').classList.add('active')
+            document.getElementById('inputs-info-email-cliente').classList.add('active')
+            document.getElementById('inputs-info-sobrenome-cliente').classList.add('active')
+            document.getElementById('inputs-info-celular-cliente').classList.add('active')
+            document.getElementById('inputs-info-senha-cliente').classList.add('active')
+            adicionaAtributoCliente()
+        }
+
+
+        function destravaCliente() {
+            document.getElementById('inputs-info-nome-cliente').classList.remove('active')
+            document.getElementById('inputs-info-email-cliente').classList.remove('active')
+            document.getElementById('inputs-info-sobrenome-cliente').classList.remove('active')
+            document.getElementById('inputs-info-celular-cliente').classList.remove('active')
+            document.getElementById('inputs-info-senha-cliente').classList.remove('active')
+            retiraAtributoCliente()
+        }
+
+        // Adicionando o event listener para chamar abreEditar quando a página for carregada
+        document.addEventListener('DOMContentLoaded', (event) => {
+            insereDadosCliente();
+            travaCamposClientes();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="menu-lateral">
+
+        <div class="btn-expandir">
+            <i class="bi bi-list" id="btn-exp"></i>
+        </div>
+
+        <ul>
+            <li class="item-menu">
+                <a href="/PAGINAS/cards2.html">
+                    <span class="icon"><i class="bi bi-house"></i></span>
+                    <span class="text-link">Home</span>
+                </a>
+            </li>
+
+            <li class="item-menu ativo">
+                <a href="/PAGINAS/perfilUsuario.html">
+                    <span class="icon"><i class="bi bi-person-circle"></i></span>
+                    <span class="text-link">Perfil</span>
+                </a>
+            </li>
+
+            <li class="item-menu">
+                <a href="/PAGINAS/listaCompras2.html">
+                    <span class="icon"><i class="bi bi-cart-plus-fill"></i></span>
+                    <span class="text-link">Minha Lista</span>
+                </a>
+            </li>
+
+            <li class="item-menu item-sair">
+                <a href="login.html">
+                    <span class="icon"><i class="bi bi-door-closed"></i></span>
+                    <span class="text-link">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Foto de perfil -->
+
+    <div class="perfil">
+        
+            <img src="/IMAGENS/9999.png" alt="">
+            <path
+                d="M180 90C180 139.706 139.706 180 90 180C40.2944 180 0 139.706 0 90C0 40.2944 40.2944 0 90 0C139.706 0 180 40.2944 180 90Z"
+                fill="#D9D9D9" />
+        </svg>
+        
+    </div>
+    <button onclick="deletaUserLogado()" class="deletarPerfil">Deletar conta</button>
+
+    <!-- Informações do perfil -->
+
+    <form action="" class="informacoes-cliente" id="informacoes-cliente">
+        <p class="fonte-verde">Dados da conta</p>
+        <button class="fonte-cinza" type="button" id="botao-edita" onclick="abreEditarCliente()">Editar</button>
+        <hr>
+        <label for="inputs-info-nome-cliente">Nome: </label>
+        <input id="inputs-info-nome-cliente" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-sobrenome-cliente">Sobrenome: </label>
+        <input id="inputs-info-sobrenome-cliente" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-email-cliente">E-mail: </label>
+        <input id="inputs-info-email-cliente" class="texto" readonly required></input><br>
+
+        <label id="id-aviso-email" class="aviso">E-mail já cadastrado</label><br>
+
+        <label for="inputs-info-celular-cliente">Celular: </label>
+        <input id="inputs-info-celular-cliente" class="texto" readonly required></input><br>
+
+        <label for="inputs-info-senha-cliente">Senha: </label>
+        <input id="inputs-info-senha-cliente" class="texto" readonly required></input><br>
+
+        <button type="button" class="botao-alterar" onclick="editaCamposCliente()">Salvar</button>
+
+    </form>
+    <script src="/SCRIPTS/main.js"></script>
+</body>
+
+</html>

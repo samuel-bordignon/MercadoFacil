@@ -1,0 +1,125 @@
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+}
+
+.records th{
+    height: 50px;
+    background-color: var(--primary-color);
+    padding-left: 20px;
+    font-size: 1.2rem;    
+}
+.records td{
+    height: 50px;
+    padding-left: 20px;
+    
+}
+
+.records td:first-child{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.records th:last-child,
+.records td:last-child{
+    padding: 0;
+    min-width: 140px;
+    text-align: center;
+}
+
+.records tr:hover{
+    background-color: var(--secundary-color);
+}
+
+@media(max-width:480px){
+    .records{
+        border-spacing: 5px;
+    }
+    .records thead{
+        display:none;
+    }
+    .records tr{
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+    .records td:not(:first-child){
+        display:flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .records td{
+        
+        margin:10px 0;
+
+    }
+
+    .records tr:hover{
+        background-color: inherit;
+    }
+}
+
+.cabecario{
+    display: flex;
+    justify-content: space-between;
+}
+.imagem-produto{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+.box-inputs{
+    width: 70%;
+}
+
+.modal-form{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+#picture__input {
+    display: none; /* Esconde o input de arquivo */
+}
+
+.picture {
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+.picture__image {
+    display: block;
+    text-align: center;
+    color: #333;
+}
+.tabela__imagem {
+    width: 60px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+.box-imagem{
+    padding: 5px;
+    border: 1px #8f8f8f solid;
+    border-radius: 5px;
+    background-color: #b4b4b4;
+    width: 70px;
+    height: 70px;
+    height: auto;
+}
+
+#box-aviso{
+    width: 40%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#box-aviso button{
+    height: 10%;
+}

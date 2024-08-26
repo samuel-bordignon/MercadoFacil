@@ -1,0 +1,157 @@
+body {
+    background-color: #0C194E; /* Cor de fundo da página */
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2%;
+    justify-content: space-between;
+  }
+  
+  .box-tabela {
+    width: 59%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .styled-table{
+    font-size: 13px;
+    width: 100%;
+    max-width: 400px;
+    color: #0C194E;
+    border-collapse: collapse;
+    
+  }
+  
+  .styled-table tr.lado td{
+    border-bottom: 2px  solid #00C677;
+    padding: 0 10px;
+  }
+  
+  .styled-table tr.lado{
+    height: 50px;
+  }
+  
+  .titulo{
+    color: #0C194E;
+    font-weight: bold;
+  }
+  
+  .styled-table tr td.lado{
+    width: 30px;
+  }
+  
+  .divisoria{
+    border: solid #0C194E;
+    width: 1px;
+    height: 100%;
+    margin-left: 1px;
+  }
+  
+  .box-form {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1%;
+  }
+  
+  .cabecario{
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+  
+  .resposta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    
+  }
+  
+  .resposta button {
+    width: 45%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px; 
+    border: none;
+  }
+  
+  .nao {
+    background-color: #0C194E;
+    border-color: white;
+    color: white;
+    transition: 0.2s;
+  }
+  
+  .nao:hover{
+    background-color: #102268;
+  }
+  
+  .nao:focus{
+    background-color: #0C194E;
+    border: #0a143d solid 2px;
+  }
+  
+  .sim {
+    background-color: #00C677;
+    color: white;
+    transition: 0.2s;
+  }
+  
+  .sim:hover{
+    background-color: #00a563;
+  }
+  
+  .sim:focus{
+    background-color: #00C677;
+    border: #008d47 solid 2px;
+  }
+  
+  
+  .box-progresso{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00c677;
+    font-size: 25px;
+  }
+  #barra-progresso{
+    height: 5px;
+    width: 70px;
+  }
+  .um{
+    height: 5px;
+    width: 70px;
+    background-color: #00C677;
+  }
+  
+  tr td{
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+  
+    font-size: 13px;
+    color: #0C194E;
+    border-collapse: collapse;
+    border-bottom: 2px  solid #00C677;
+    padding: 0 10px;
+  }

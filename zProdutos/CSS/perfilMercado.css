@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.perfil {
+    margin: auto;
+    width: 1219px;
+    height: 210px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 48%, rgba(9, 9, 121, 1) 48%, rgba(9, 9, 121, 1) 100%);
+    margin-top: 2.5%;
+    align-items: center;
+
+}
+
+.img-perfil {
+    margin-top: 2%;
+    margin-left: 3%;
+
+}
+
+.informacoes {
+    margin: auto;
+    width: 1219px;
+    height: fit-content;
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: rgb(255, 255, 255);
+    margin-top: 0.5%;
+    align-items: center;
+
+}
+
+.fonte-verde {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(0, 198, 119, 1);
+    margin-left: 3%;
+    font-size: 18px;
+
+}
+
+.fonte-cinza {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 78%;
+    color: rgba(210, 210, 210, 1);
+    color: rgba(210, 210, 210, 1);
+    text-decoration: none;
+    font-weight: normal;
+
+}
+
+.linha-repartição {
+    align-items: center;
+    width: 90%;
+    height: 0.5px;
+    background-color: rgb(223, 214, 214);
+    margin: 20px 0;
+    margin-left: 5%;
+    margin-bottom: 0.5%;
+
+}
+
+.texto-informacional {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(210, 210, 210, 1);
+    color: rgba(210, 210, 210, 1);
+    text-decoration: none;
+    font-weight: normal;
+    margin-left: 2.5%;
+
+}
+
+.bi bi-eye {
+    width: 1.5px;
+
+}
+
+.texto {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(210, 210, 210, 1);
+    text-decoration: none;
+    font-weight: normal;
+    margin-left: 2.5%;
+    font-size: 14px;
+
+}
+
+.texto.active {
+    color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+}
+
+.botao-alterar {
+    background: transparent;
+    border: 2px solid rgb(9, 9, 121);
+    color: rgb(9, 9, 121);
+    padding: 9px 19px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 78%;
+    text-decoration: none;
+    font-weight: normal;
+
+}
+
+.botao-alterar :hover {
+    text-decoration: none;
+    font-weight: normal;
+    color: rgb(9, 9, 121);
+
+}
+
+.aviso {
+    visibility: hidden;
+
+}
+
+.ativo {
+    visibility: visible;
+    color: red;
+}
+
+
+.deletarPerfil {
+    background-color: #ffd0d0;
+    border-style: none;
+    border-radius: 6px;
+    border: rgb(255, 147, 147) solid 3px;
+    height: 40px;
+    padding: 6px 12px;
+    color: rgb(255, 0, 0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow .6s ease;
+    width: 200px;
+    margin-left: 82%;
+    margin-top: 2%;
+    /* Adiciona margem automática à esquerda */
+    display: block;
+    /* Necessário para funcionar com margin-left: auto */
+}
